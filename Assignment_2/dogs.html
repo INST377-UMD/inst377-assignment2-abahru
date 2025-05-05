@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>INST377 - Class Activities</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script/simpleslider.min.js"></script>
+        <script src="script/annyang.min.js"></script>
+        <script src="script/main.js" defer></script>
+        <script src="script/dogs.js" defer></script>
+
+    </head>
+
+    <body>
+        <!-- Header Section -->
+         <header>
+            <h1>INST377 - Class Activities</h1>
+         </header>
+        <!-- Navigation Bar -->
+         <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+         <main>
+            <h2>Doggos! 🐶</h2>
+
+            <div id="carousel" class="carousel" style="text-align:center;"></div>
+
+            <div id="breedButtons" class="button-container" style="margin-top: 20px;"></div>
+
+            <div id="breedInfo" class="breed-info" style="display: none; margin: 20px 0;"></div>
+
+            <div class="audio-box">
+                <h2>In this web page there are options to Navigate using Audio!</h2>
+                <p>Ensure your Mic is enabled to be able to use this feature</p>
+                <ul>
+                    <li>Load Dog Breed<br>
+                        <em>Say: <strong>Load Dog Breed &lt;Dog Breed Name&gt;</strong></em>
+                    </li>
+                    <li>Navigate to a Different Page<br>
+                        <em>Say: <strong>Navigate to &lt;page&gt;</strong></em>
+                    </li>
+                    <li>Change the Page Color<br>
+                        <em>Say: <strong>Change the color to &lt;color&gt;</strong></em>
+                    </li>
+                    <li>Say Hello Back to you!<br>
+                        <em>Say: <strong>Hello</strong></em>
+                    </li>
+                </ul>
+                <button onclick="annyang.start()">Turn On Listening</button>
+                <button onclick="annyang.abort()">Turn Off Listening</button>
+            </div>
+            
+         </main>
+
+    </body>   
+</html>

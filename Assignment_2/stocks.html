@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>INST377 - Class Activities</title>
+        <link rel="stylesheet" href = "styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script/annyang.min.js"></script>
+        <script src="script/main.js" defer></script>
+        <script src="script/stocks.js" defer></script>
+
+    </head>
+
+    <body>
+        <!-- Header Section -->
+         <header>
+            <h1>INST377 - Class Activities</h1>
+         </header>
+        <!-- Navigation Bar -->
+         <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+         <main>
+            <h2>Let's chart some stocks!</h2>
+            
+            <div class="stock-lookup">
+                <input type="text" id="tickerInput" placeholder="Enter stock ticker (e.g. AAPL)" maxlength="5" />
+                <select id="dayRange">
+                    <option value="30">30 Days</option>
+                    <option value="60">60 Days</option>
+                    <option value="90">90 Days</option>
+                </select>
+                <button id="lookupBtn">Lookup!</button>
+            </div>
+          
+            <!-- Chart Area -->
+             <canvas id="stockChart" width="600" height="300" style="margin: 20px 0;"></canvas>
+          
+            <!-- Reddit Top 5 -->
+             <h3>Top Reddit Stocks</h3>
+             <table border="1">
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Comment Count</th>
+                        <th>Sentiment</th>
+                    </tr>
+                </thead>
+                <tbody id="redditTableBody">
+
+                </tbody>
+              </table>
+          
+            <div class="audio-box">
+                <h2>In this web page there are options to Navigate using Audio!</h2>
+                <p>Ensure your Mic is enabled to be able to use this feature</p>
+                <ul>
+                    <li>Navigate to a Different Page<br>
+                        <em>Say: <strong>Navigate to &lt;page&gt;</strong></em>
+                    </li>
+                    <li>Change the Page Color<br>
+                        <em>Say: <strong>Change the color to &lt;color&gt;</strong></em>
+                    </li>
+                    <li>Say Hello Back to you!<br>
+                        <em>Say: <strong>Hello</strong></em>
+                    </li>
+                </ul>
+                <button onclick="annyang.start()">Turn On Listening</button>
+                <button onclick="annyang.abort()">Turn Off Listening</button>
+            </div>
+            
+         </main>
+
+    </body>   
+</html>
